@@ -61,7 +61,9 @@
                      &trans         &trans        &trans     &trans  &kp DEL    &trans  &trans    &trans          &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         settings_layer {
@@ -71,6 +73,16 @@
 &trans  &bt BT_PRV    &trans        &trans        &bt BT_NXT    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                       &trans        &trans        &trans        &trans      &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        symobls_layer {
+            bindings = <
+&trans  &trans           &trans       &trans    &trans      &trans                         &trans     &trans         &trans        &trans                &trans                 &trans
+&trans  &trans           &trans       &trans    &trans      &trans                         &trans     &trans         &trans        &trans                &trans                 &trans
+&trans  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                         &kp N6     &kp N7         &kp N8        &kp N9                &kp N0                 &kp MINUS
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans    &trans  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+                         &trans       &trans    &trans      &trans       &trans    &trans  &trans     &trans         &trans        &trans
             >;
         };
     };
